@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test 1`] = `
+<div
+  className="sc-gzVnrw CaTve"
+>
+  <div
+    className="sc-htoDjs fRBlsV"
+  />
+  <div
+    className="sc-dnqmqq hRirXI"
+  >
+    Hello
+  </div>
+  <div
+    className="sc-iwsKbI bofxaI"
+  />
+</div>
+`;
