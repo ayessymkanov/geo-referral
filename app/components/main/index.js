@@ -11,7 +11,7 @@ export default class Main extends React.Component {
         <h2>Help us build the referral source you want to use</h2>
       </Title>,
       <ImageContainer key="image">
-        <img src={image} />
+        <img src={image} alt="" />
       </ImageContainer>,
       <Footer key="footer">
         <ButtonLink to='/explanation'>Continue</ButtonLink>

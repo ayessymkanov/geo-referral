@@ -14,8 +14,8 @@ export default class Waiting extends React.Component {
   render () {
     return [
       <Pic key="pic">
-        <Man src={man} />
-        <Pillar src={pillar} />
+        <Man src={man} alt="" />
+        <Pillar src={pillar} alt="" />
         <SemiCircle />
         <div>
           {stars.map((item) => this.renderStars(item))}
