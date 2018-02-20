@@ -24,22 +24,22 @@ export default class Login extends React.Component {
   }
   handleChange = (e) => {
     e.persist()
-    this.setState(() => ({ [e.target.name]: e.target.value}))
+    this.setState({ [e.target.name]: e.target.value})
   }
   handleSubmit = (e) => {
     e.preventDefault()
     if (!validator.isEmail(this.state.email)) {
-      this.setState(() => ({ errors: { email: 'Enter proper email' } }))
+      this.setState({ errors: { email: 'Enter proper email' } })
     } else if (validator.isEmpty(this.state.password)){
-      this.setState(() => ({ errors: { password: 'Please provide password' } }))
+      this.setState({ errors: { password: 'Please provide password' } })
     } else {
       const res = login({ email: this.state.email, password: this.state.password })
       if (res.status === 'Success') {
-        this.setState(() => ({ errors: {}}), () => {
+        this.setState({ errors: {}}, () => {
           this.props.history.push('/waiting')
         })
       } else {
-        this.setState(() => ({ errors: { login: res.error}}))
+        this.setState({ errors: { login: res.error}})
       }
     }
   }

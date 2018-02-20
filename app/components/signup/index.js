@@ -27,9 +27,9 @@ export default class Signup extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     if (validator.isEmpty(this.state.name)) {
-      this.setState((prevState, props) => ({ errors: { name: 'Name is required' }}))
+      this.setState({ errors: { name: 'Name is required' }})
     } else if (!validator.isMobilePhone(this.state.phone, 'any')) {
-      this.setState((prevState, props) => ({ errors: { phone: 'Please enter proper phone number'}}))
+      this.setState({ errors: { phone: 'Please enter proper phone number'}})
     } else {
       signup(this.state.email)
       this.props.history.push('/waiting')
@@ -37,7 +37,7 @@ export default class Signup extends React.Component {
   }
   handleChange = (e) => {
     e.persist()
-    this.setState((prevState, props) => ({ [e.target.name]: e.target.value, errors: {} }))
+    this.setState({ [e.target.name]: e.target.value, errors: {} })
   }
   goToNext = () => {
     this.setState((prevState, props) => ({ shown: prevState.shown + 1 }))
@@ -47,7 +47,7 @@ export default class Signup extends React.Component {
     if (validator.isEmail(this.state.email)) {
       this.setState((prevState, props) => ({ shown: prevState.shown + 1, errors: {} }))
     }
-    this.setState((prevState, props) => ({ errors: { email: 'Enter proper email' }}))
+    this.setState({ errors: { email: 'Enter proper email' }})
   }
   back = () => {
     this.setState((prevState, props) => ({ shown: prevState.shown - 1 }))
