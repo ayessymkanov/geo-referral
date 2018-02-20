@@ -5,7 +5,12 @@ import { Footer, ButtonLink } from '../shared/styles'
 import man from '../../assets/man.png'
 import pillar from '../../assets/pillar.png'
 
+const stars = [1,2,3,4];
+
 export default class Waiting extends React.Component {
+  renderStars = (item) => {
+    return <Star key={item} />
+  }
   render () {
     return [
       <Pic key='0'>
@@ -13,10 +18,7 @@ export default class Waiting extends React.Component {
         <Pillar src={pillar} />
         <SemiCircle />
         <div>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
+          {stars.map((item) => this.renderStars(item))}
         </div>
       </Pic>,
       <Queue key='1'>
