@@ -13,7 +13,7 @@ export default class Waiting extends React.Component {
   }
   render () {
     return [
-      <Pic key='0'>
+      <Pic key="pic">
         <Man src={man} />
         <Pillar src={pillar} />
         <SemiCircle />
@@ -21,11 +21,11 @@ export default class Waiting extends React.Component {
           {stars.map((item) => this.renderStars(item))}
         </div>
       </Pic>,
-      <Queue key='1'>
+      <Queue key="queue">
         <QueueItem count={34934} label='People ahead of you' />
         <QueueItem count={0} label='Behind' />
       </Queue>,
-      <Footer key='2'>
+      <Footer key="footer">
         <FooterLabel>Demand for Geo Referrals has been incredible and we are generating referrals as fast as we can</FooterLabel>
         <ButtonLink to='/share'>Bump Me up the Queue</ButtonLink>
         <ButtonLink to='/' muted>Notify Me When My First Referral is Ready</ButtonLink>

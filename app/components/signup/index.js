@@ -69,43 +69,43 @@ export default class Signup extends React.Component {
   renderSecond = () => {
     return [
       <Input
-        key="0"
+        key="input"
         type="email"
         name="email"
         value={this.state.email}
         placeholder="Your Email"
         onChange={this.handleChange}
       />,
-      <Error key="1">{this.state.errors.email}</Error>,
-      <Button key="2" onClick={this.goToLast}>Continue with Email</Button>
+      <Error key="error">{this.state.errors.email}</Error>,
+      <Button key="button" onClick={this.goToLast}>Continue with Email</Button>
     ]
   }
   renderLast = () => {
     return [
       <Input
-        key="0"
+        key="input"
         type="text"
         name="name"
         value={this.state.name}
         placeholder="Your name"
         onChange={this.handleChange}
       />,
-      <Error key="1">
+      <Error key="error">
         {this.state.errors.name}
       </Error>,
       <Input
-        key="2"
+        key="input"
         type="tel"
         name="phone"
         value={this.state.phone}
         placeholder="Your phone"
         onChange={this.handleChange}
       />,
-      <Error key="3">
+      <Error key="error">
         {this.state.errors.phone}
       </Error>,
       <Submit
-        key="4"
+        key="submit"
         type="submit"
         name="submit"
         value="Signup"

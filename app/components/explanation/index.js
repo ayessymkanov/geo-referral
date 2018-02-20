@@ -20,7 +20,7 @@ export default class Explanation extends React.Component {
   render() {
     return [
       <Modal
-        key="0"
+        key="modal"
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.closeModal}
         contentLabel="Please share a little more info"
@@ -31,10 +31,10 @@ export default class Explanation extends React.Component {
           <Question onClick={this.closeModal} />
         </ModalContent>
       </Modal>,
-      <Title key="1">
+      <Title key="title">
         <h1>One more thing (actually two)</h1>
       </Title>,
-      <Main key="2">
+      <Main key="main">
         <Thing>
           <img src={one} alt="" width="70" />
           <Para>
@@ -50,7 +50,7 @@ export default class Explanation extends React.Component {
           </Para>
         </Thing>
       </Main>,
-      <Footer key="3">
+      <Footer key="footer">
         <ButtonLink to="/signup" large>Join Geo Referral</ButtonLink>
         <ButtonLink to="/login" transparent>Already have an account? Log In</ButtonLink>
       </Footer>

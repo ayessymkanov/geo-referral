@@ -22,19 +22,19 @@ export default class ShareScreen extends React.Component {
   }
   render() {
     return [
-      <IconContainer key="1">
+      <IconContainer key="icon">
         <img src={envelope} alt="" />
       </IconContainer>, 
-      <ShareInfo key="2">
+      <ShareInfo key="share-info">
         <ShareSpan>This is your personal invitation link</ShareSpan>
         <ShareLink>{url}</ShareLink>
         <ShareSpan>For every friend who signs up, we'll move you up the queue by at least 4000 places.</ShareSpan>
       </ShareInfo>,
-      <Footer key="3">
+      <Footer key="footer">
         <ShareBtn onClick={this.toggleModal}>Share</ShareBtn>
       </Footer>,
       <Modal
-        key="4"
+        key="modal"
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.toggleModal}
         style={modalStyles}
